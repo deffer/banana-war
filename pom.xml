@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>nz.ac.auckland</groupId>
+		<artifactId>uoa-war-parent</artifactId>
+		<version>1.12</version>
+	</parent>
+	<groupId>nz.ac.auckland.banana</groupId>
+	<artifactId>banana-war</artifactId>
+	<packaging>war</packaging>
+	<name>banana-war</name>
+	<version>1.1-SNAPSHOT</version>
+	<description>
+		This is the final assembly artifact for Banana.
+	</description>
+	<properties>
+		<default.repo>UoA.ITSS.GrpApps/banana</default.repo>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>nz.ac.auckland.banana</groupId>
+			<artifactId>banana-core</artifactId>
+			<version>[1,2)</version>
+			<exclusions>
+				<exclusion>
+					<groupId>nz.ac.auckland.common</groupId>
+					<artifactId>runnable-war-jetty8</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.ac.auckland.common</groupId>
+			<artifactId>runnable-war-jetty8</artifactId>
+			<version>[3,4)</version>
+			<type>war</type>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.bluetrainsoftware.maven</groupId>
+				<artifactId>release-pom</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>generate-dep-list</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>release-pom</goal>
+						</goals>
+						<configuration>
+							<useMaven2>false</useMaven2>
+							<outputFile>${project.build.outputDirectory}/META-INF/maven/released-pom.xml</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

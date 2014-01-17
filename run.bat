@@ -1,0 +1,1 @@
+%JAVA_HOME%/bin/java -jar target/banana-war-1.1-SNAPSHOT.war
