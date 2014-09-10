@@ -1,1 +1,1 @@
-%JAVA_HOME%/bin/java -jar target/banana-war-1.1-SNAPSHOT.war
+%JAVA_HOME%/bin/java -Dlogback.configurationFile=./logback.xml -jar target/banana-war-1.1-SNAPSHOT.war -P./war.properties
