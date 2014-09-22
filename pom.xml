@@ -2,24 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>nz.ac.auckland</groupId>
-		<artifactId>uoa-groovy-parent</artifactId>
-		<version>3.15</version>
+		<groupId>nz.ac.auckland.groupapps.parent</groupId>
+		<artifactId>parent-groovy-groupapps-central</artifactId>
+		<version>1.4</version>
 	</parent>
 	<groupId>nz.ac.auckland.banana</groupId>
 	<artifactId>banana-war</artifactId>
 	<packaging>bathe-war</packaging>
 	<name>banana-war</name>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 	<description>
-		This is the final assembly artifact for Banana.
+		This is the final assembly artefact for Banana.
 	</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>nz.ac.auckland.banana</groupId>
 			<artifactId>banana-core</artifactId>
-			<version>[1,2)</version>
+			<version>[1.1,2)</version>
 			<exclusions>
 				<exclusion>
 					<groupId>nz.ac.auckland.common</groupId>
