@@ -10,7 +10,7 @@
 	<artifactId>banana-war</artifactId>
 	<packaging>bathe-war</packaging>
 	<name>banana-war</name>
-	<version>1.4-SNAPSHOT</version>
+	<version>1.5-SNAPSHOT</version>
 
 	<description>
 		This is the final assembly artefact for Banana.
@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>nz.ac.auckland.banana</groupId>
 			<artifactId>banana-core</artifactId>
-			<version>[1.3,2)</version>
+			<version>[1.4,2)</version>
 			<exclusions>
 				<exclusion>
 					<groupId>nz.ac.auckland.common</groupId>
